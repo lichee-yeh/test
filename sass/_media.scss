@@ -1,0 +1,120 @@
+// media
+@mixin pc-1680 {
+    @media screen and (max-width: 1680px) {
+        @content
+    }
+}
+
+@mixin pc-1440 {
+    @media screen and (max-width: 1440px) {
+        @content
+    }
+}
+
+@mixin pc-1366 {
+    @media screen and (max-width: 1366px) {
+        @content
+    }
+}
+
+@mixin pc-1280 {
+    @media screen and (max-width: 1280px) {
+        @content
+    }
+}
+
+// pad
+@mixin m-1024 {
+    @media screen and (max-width: 1024px) {
+        @content
+    }
+}
+
+// iphX
+@mixin m-ipX {
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+        @content
+    }
+}
+
+// ip plus
+@mixin m-767 {
+    @media screen and (max-width: 767px) {
+        @content
+    }
+}
+
+// ip6 7
+@mixin m-413 {
+    @media screen and (max-width: 413px) {
+        @content
+    }
+}
+
+// ip5
+@mixin m-374 {
+    @media screen and (max-width: 374px) {
+        @content
+    }
+}
+
+@mixin media($width) {
+    @media screen and (max-width: $width) {
+        @content
+    }
+}
+
+@mixin media-m($width) {
+    @media screen and (max-device-width: $width) {
+        @content
+    }
+}
+
+$m-width:1024px;
+@mixin m-only($m-width:1024px) {
+    @media screen and (max-device-width: $m-width) {
+        @content
+    }
+}
+
+@mixin media-min($width) {
+    @media screen and (min-width: $width) {
+        @content
+    }
+}
+
+@mixin media-h($height) {
+    @media screen and (max-height: $height) {
+        @content
+    }
+}
+
+@mixin media-area($min, $max) {
+    @media screen and (min-width: $min) and (max-width: $max) {
+        @content
+    }
+}
+
+@mixin media-hover {
+    @media screen and (min-width: 1025px) {
+        @content
+    }
+}
+
+@mixin pad-only {
+    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        @content
+    }
+}
+
+@mixin media-ie {
+    @media screen\0 {
+        @content
+    }
+}
+
+@mixin pc-w {
+    @media screen and (min-width: 767px) {
+        @content
+    }
+}

@@ -1,0 +1,58 @@
+// header
+header {
+    position: fixed;
+    top: 75px;
+    left: 60px;
+    z-index: 3;
+    @include pc-1366 {
+        left: 50px;
+    }
+    @include m-1024 {
+        top: 60px;
+    }
+    @include m-767 {
+        top: 3%;
+        right: 5%;
+        left: inherit;
+    }
+    nav.pc {
+        @include m-767 {
+            display: none;
+        }
+        a {
+            color: #000;
+            font-size: 1.8rem;
+            font-weight: bold;
+            @extend %v-write;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            position: relative;
+            @include pc-1440 {
+                font-size: 1.6rem;
+                margin-bottom: 30px;
+            }
+            @include media(1366px) {
+                margin-bottom: 25px;
+            }
+            &:after {
+                content: '';
+                width: 4px;
+                height: 0;
+                background: #000;
+                display: block;
+                position: absolute;
+                left: -6px;
+                bottom: 0;
+                @extend %trans;
+            }
+            &:hover,
+            &.active {
+                &:after {
+                    height: 100%;
+                    bottom: inherit;
+                    top: 0;
+                }
+            }
+        }
+    }
+}

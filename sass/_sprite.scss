@@ -1,0 +1,211 @@
+.kv-sprite-cool {
+    background: url(../img/sprite-cool_kv.png) no-repeat center bottom/ cover;
+}
+
+.sprite-cool {
+    .pageBox {
+        font-size: 0;
+        position: relative;
+    }
+    .page {
+        @extend %shade2;
+        @include m-767 {
+            width: 100%;
+        }
+    }
+    .page1 {
+        width: 77%;
+        float: right;
+        @include clearfix;
+        @include m-767 {
+            width: 100%;
+        }
+    }
+    .page2 {
+        width: 100%;
+        margin-top: 7vh;
+        @include pc-w {
+            width: 28%;
+            margin-top: 100px;
+            position: absolute;
+            top: 1%;
+            left: 5%;
+        }
+    }
+}
+
+.sprite-typo {
+    width: 190px;
+    margin-top: 10px;
+    @include m-1024 {
+        width: 183px;
+        margin-top: 0;
+    }
+}
+
+.page-g1,
+.page-g2,
+.page-g3 {
+    margin: 0 auto 5vh;
+    transform: scale(0.8);
+    @include pc-1440 {
+        transform: scale(0.6);
+        transform-origin: center top;
+    }
+    @include m-1024 {
+        transform: scale(1);
+        transform-origin: center center;
+        margin-bottom: 10vh;
+    }
+    // @include m-767 {
+    //     transform: scale(0.45);
+    //     transform-origin: left top;
+    // }
+}
+
+.page-g1 {
+    width: 836px;
+    @include m-1024 {
+        width: 418px;
+    }
+    @include m-767 {
+        width: 229px;
+    }
+    @include m-413 {
+        width: 188px;
+    }
+    @include m-374 {
+        width: 162px;
+    }
+}
+
+.page-g2 {
+    width: 1194px;
+    @include m-1024 {
+        width: 597px;
+    }
+    @include m-767 {
+        width: 328px;
+    }
+    @include m-413 {
+        width: 268px;
+    }
+    @include m-374 {
+        width: 238px;
+    }
+}
+
+.page-g3 {
+    width: 352px;
+    @include m-1024 {
+        width: 176px;
+    }
+    @include m-767 {
+        width: 95px;
+    }
+    @include m-413 {
+        width: 79px;
+    }
+    @include m-374 {
+        width: 70px;
+    }
+}
+
+.page-g4 {
+    width: 100%;
+    top: -15%;
+    left: 0;
+    z-index: -1;
+    @include m-767 {
+        width: 126%;
+        left: -13%;
+    }
+}
+
+.page-g3-outer {
+    z-index: 1;
+}
+
+.sprite-color {
+    .cir1 {
+        background: #009d42;
+    }
+    .cir2 {
+        background: #ffe100;
+    }
+    .cir3 {
+        background: #fff;
+    }
+}
+
+.kv-sprite-24 {
+    background: url(../img/sprite-24_kv.jpg) no-repeat center/ cover;
+}
+
+.sprite-24 {
+    .page {
+        margin: 0 auto 7vh;
+        width: 80%;
+        max-width: 897px;
+        @include m-1024 {
+            width: 95%;
+        }
+        @include m-767 {
+            width: 100%;
+        }
+    }
+    .page1 {
+        margin-bottom: 10vh;
+    }
+}
+
+.sprite-24,
+.sprite-cool {
+    .left {
+        >div {
+            &:first-child {
+                @include media-min(1025px) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    section.layout {
+        margin-bottom: 0;
+        overflow: hidden;
+        @include m-1024 {
+            margin-bottom: -1px;
+        }
+        .wall-g {
+            width: 100%;
+            background: url(../img/bg-wall-g.jpg);
+            margin-top: 15vh;
+            padding: 5vh 0;
+            @include pc-1440 {
+                padding: 15vh 0 0;
+            }
+            @include m-1024 {
+                padding-top: 10vh;
+            }
+            @include m-767 {
+                padding-top: 15vh;
+            }
+            ;
+            >div {
+                @include pc-1440 {
+                    &:not(:first-child) {
+                        margin-top: -28vh;
+                    }
+                }
+                @include m-1024 {
+                    &:not(:first-child) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    .box {
+        text-align: center;
+    }
+}

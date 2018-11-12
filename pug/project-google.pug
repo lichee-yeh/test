@@ -1,0 +1,42 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+    link(rel = 'stylesheet', href = 'css/project.css')
+    script(src = './js/Project.min.js')
+block content
+    +scroll
+    main.por.google.banner-info
+        section.introBox
+            .left.wow.fadeInUp(style={opacity:0})
+                h3 
+                    span.break 『猴』你祝福 - 
+                    span.break 用數位天燈線上傳遞幸福
+            .right.wow.fadeInUp(style={opacity:0})
+                .intro
+                    h4 Description
+                    p 
+                        span.break Google 在 2016 年的春節製作了一個線上放天燈的網站，用手機寫下 2016 祝福，讓數位天燈傳遞幸福。
+                        span.break Banner 設計以紅色帶入春節氣息，人物風格延續 google 常用的扁平化設計，整體充滿祝福感、新願望/願景，用來宣傳吸引 user 前往數位天燈網站。
+                .intro
+                    h4 Information
+                    ul
+                        li
+                            span Project
+                            span 『猴』你祝福 - 
+                                span.break-bn 數位天燈傳遞幸福
+                        li
+                            span Client
+                            span Google
+                        li
+                            span Year
+                            span 2016
+                        li
+                            span Role
+                            span GDN Banner Design
+        section.banner.introBox
+            ul
+                li.bn.wow.fadeInUp(style={opacity:0})
+                    +gif('google_bn')
+                li.yt.wow.fadeInUp(style={opacity:0})
+                    <div class='embed-container'><iframe src='https://www.youtube.com/embed/ANcjpTUIajo' frameborder='0' allowfullscreen></iframe></div>
+        +switchBox('eva-wifi','one-more')

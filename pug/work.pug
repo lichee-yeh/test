@@ -1,0 +1,41 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+	link(rel = 'stylesheet', href = 'css/works.css')
+	script(src = './js/Work.min.js')
+block work
+	a.active work
+block content
+	+scroll
+	h2.tt.wow.fadeInUp(style={opacity:0})
+		span work
+	.content
+		+work('one-more','one more trip 玩默官方網站','Responsive Website, Brand Identity').bn-om
+		|
+		+work('coke','Coca-Cola / 食尚餐廚集點送','Mobile First Website').bn-coke
+		|
+		+work('sprite-cool','Sprite / Cool 玩瓶 BE YOU 激發最酷的你','Responsive Website').bn-sprite-cool
+		|
+		+work('sprite-24','Sprite / Cool 玩瓶 沁涼絕殺 24 秒','Mobile First Website').bn-sprite-24
+		|
+		+work('tiger','tigerair / 到名古屋狂旅行','Adaptive Website, Motion Design').bn-tiger
+		|
+		+work('eva','EVA AIR / 那些年我們一起搭的 747-400','Responsive Website').bn-eva
+		|
+		+work('kids','兒童福利聯盟 / 長假營養資助計畫','Responsive Website').bn-kids
+		|
+		+work('house','城中建設 / 閱狷聲電子錶版','1920 HD Website').bn-house
+		|
+		+work('wildaid','WildAid 野生救援 / 無翅聯盟官方網站','Responsive Website').bn-wildaid
+		|
+		+work('eva-fool','EVA AIR / 粉絲專頁愚人節貼文','Facebook Banner').bn-eva-fool
+		|
+		+work('eva-wifi','EVA AIR / 粉絲專頁機上 Wi-Fi 宣傳影片','Facebook Wifi Promotional Video').bn-eva-wifi
+		|
+		+work('google','Google / 『猴』你祝福 - 數位天燈傳遞幸福','GDN Banner').bn-google
+	.contact
+		p say hello?
+		.box
+			p +886-928-135-451
+			a(href="mailto:yehcyamm@gmail.com").mail yehcyamm@gmail.com
+block footer

@@ -1,0 +1,94 @@
+.eva-fool {
+    .banner {
+        text-align: center;
+        width: 1080px;
+        @include pc-1440 {
+            width: 73%;
+        }
+        li {
+            width: 500px;
+            display: inline-block;
+            margin: 20px;
+            @include pc-1440 {
+                width: 46%;
+                margin: 3vh 2%;
+            }
+            @include m-767 {
+                width: 100%;
+            }
+        }
+    }
+    .report {
+        margin: 10vh auto;
+        @include m-767 {
+            margin: 5vh auto;
+        }
+        .news {
+            margin: auto;
+            display: block;
+            @extend %trans;
+            &:hover {
+                @include media-hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            .news {
+                width: 1000px;
+                @include pc-1440 {
+                    width: 96%;
+                }
+                @include m-767 {
+                    width: 100%;
+                }
+            }
+        }
+        &:nth-child(4) {
+            .news {
+                width: 840px;
+                @include m-1024 {
+                    width: 96%;
+                }
+                @include m-767 {
+                    width: 100%;
+                }
+            }
+        }
+        &:last-child {
+            .news {
+                width: 520px;
+                @include m-767 {
+                    width: 100%;
+                }
+            }
+        }
+        p {
+            color: $gray;
+            margin: 20px 0;
+        }
+        a {
+            color: $gray;
+            @extend %trans;
+            @include m-767 {
+                display: block;
+                word-break: break-all
+            }
+            &:hover {
+                @include media-hover {
+                    color: $l-gray;
+                }
+            }
+        }
+    }
+    .post {
+        text-align: center;
+        margin: auto;
+        margin-bottom: 15vh;
+        width: 600px;
+        @include m-767 {
+            display: none;
+        }
+    }
+}

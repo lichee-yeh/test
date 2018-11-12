@@ -1,0 +1,179 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+    link(rel = 'stylesheet', href = 'css/project.css')
+    script(src = './js/Project.min.js')
+block content
+    +scroll
+    main.por.tiger
+        .kv.kv-tiger
+        .device.laptop.wow.fadeInUp(style={opacity:0})
+            +png('tiger')
+        section.introBox
+            .left.wow.fadeInUp(style={opacity:0})
+                h3 
+                    span.break 離家出走
+                    span.break 去名古屋狂旅行！
+                a(href="http://fans.tigerairtw.com/event/Nagoya2016/video.html" target='_blank') 
+                    span VIEW WEBSITE
+                    span.arrow
+            .right.wow.fadeInUp(style={opacity:0})
+                .intro
+                    h4 Description
+                    p 
+                        span.break 在台灣知名度還不高的名古屋， 比起古味的京都和潮流的東京，有更多台人陌生的旅遊景點。因此我們推出豐富的內容網站， 透過虎編蒐羅的五條旅人特色路線，脫離一般觀光客的制式玩法，希望吸引愛好廉航的年輕旅客們，深入日本旅行。
+                        span.break 網站設計搭配虎航的形象，選擇比較活潑明亮的風格，插圖、印章都有加上一些小動態，讓收集印章的過程增加點趣味。
+                .intro
+                    h4 Information
+                    ul
+                        li
+                            span Project
+                            span 離家出走 去名古屋狂旅行！
+                        li
+                            span Client
+                            span Tigerair Taiwan
+                        li
+                            span Year
+                            span 2017
+                        li
+                            span Role
+                            span 
+                                span.break Adaptive Web Design, UI Design,
+                                span.break PSD to Html, Motion Design
+        .mockup.wow.fadeInUp(style={opacity:0})
+            +jpg('tiger-layout')
+        section.identity
+            +sub-tt('identity')
+            main
+                .left.wow.fadeInUp(style={opacity:0})
+                    .info
+                        h4 typography
+                        ul.typo
+                            li.tiger-typo
+                              +svg('tiger-typo')  
+                            li.notoSans
+                                p.gray-l 內文
+                                p 思源黑體 Noto Sans CJK TC Regular
+                                p.font-b 思源黑體 Noto Sans CJK TC Bold
+                .right.wow.fadeInUp(style={opacity:0})
+                    .info
+                        h4 color
+                        ul.color
+                            li
+                                .cir.cir1
+                                p #faa835
+                            li
+                                .cir.cir2
+                                p #fec232
+                            li
+                                .cir.cir3
+                                p #f3e1c0
+                            li
+                                .cir.cir4
+                                p #595854
+            main
+                .info.tiger-info.wow.fadeInUp(style={opacity:0})
+                    h4 icon
+                    .tiger-iconBox
+                        ul.gif
+                            li
+                                +gif('tiger-gif1')
+                            li
+                                +gif('tiger-gif2')
+                            li
+                                +gif('tiger-gif3')
+                            li
+                                +gif('tiger-gif4')
+                            li
+                                +gif('tiger-gif5')
+                            li
+                                +gif('tiger-gif6')
+                            li
+                                +gif('tiger-gif7')
+                            li
+                                +gif('tiger-gif8')
+                            li
+                                +gif('tiger-gif9')
+                            li
+                                +gif('tiger-gif10')
+                        ul.category
+                            li
+                                +png('tiger-icon1')
+                            li
+                                +png('tiger-icon2')
+                            li
+                                +png('tiger-icon3')
+                            li
+                                +png('tiger-icon4')
+                            li
+                                +png('tiger-icon5')
+                            li
+                                +png('tiger-icon6')
+                            li
+                                +png('tiger-icon7')
+                            li
+                                +png('tiger-icon8')
+                            li
+                                +png('tiger-icon9')
+                            li
+                                +png('tiger-icon10')
+                    
+        section.layout
+            +sub-tt('layout')
+            .box.onePage
+                .page.page1.wow.fadeInUp(style={opacity:0})
+                    +jpg('tiger-layout2')
+                .page.page2.wow.fadeInUp(style={opacity:0})
+                    +jpg('tiger-layout3')
+            .box
+                ul
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-layout4')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-layout5')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-layout6')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-layout7')
+        section.storyboard
+            +sub-tt('motion storyboard')
+            .box
+                ul
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb1')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb2')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb3')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb4')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb5')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb6')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb7')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb8')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb9')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb10')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb11')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb12')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb13')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb14')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb15')
+                    li.wow.fadeInUp(style={opacity:0})
+                        +jpg('tiger-sb16')
+            .ytBox.wow.fadeInUp(style={opacity:0})
+                .embed-container
+                    iframe(src='https://www.youtube.com/embed/vtYlWv1tV2o', frameborder='0', allowfullscreen='')
+        .mockup.wow.fadeInUp(style={opacity:0})
+            +jpg('tiger-layout8')
+        +switchBox('sprite-24','eva')

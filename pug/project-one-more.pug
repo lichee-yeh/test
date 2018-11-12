@@ -1,0 +1,109 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+	link(rel = 'stylesheet', href = 'css/project.css')
+	script(src = './js/Project.min.js')
+block content
+	+scroll
+	main.por.onemore
+		.kv.kv-om
+		.device.laptop.wow.fadeInUp(style={opacity:0})
+			+png('onemore')
+		section.introBox
+			.left.wow.fadeInUp(style={opacity:0})
+				h3 
+					span.break one more trip
+					span.break 官方網站
+				a(href="https://onemoretrip.tw/" target='_blank') 
+					span VIEW WEBSITE
+					span.arrow
+			.right.wow.fadeInUp(style={opacity:0})
+				.intro
+					h4 Description
+					p 
+						span.break one more 以旅選文、旅選物、旅選色、旅選輯的四大分類介紹日本，一篇深入的旅遊文化探討 ，也可能是一個值得購買的紀念品開箱，一張曾經按下的美好瞬間，或是日本當地進行的特別企劃。
+						span.break 整體是以資訊內容為主，網站設計則以簡潔、典雅的風格走向，讓 user 在閱讀的時候能夠舒適的瀏覽。
+				.intro
+					h4 Information
+					ul
+						li
+							span Project
+							span one more trip 官方網站
+						li
+							span Client
+							span one more 玩默國際有限公司
+						li
+							span Year
+							span 2017
+						li
+							span Role
+							span 
+								span.break Responsive Web Design, UI Design,
+								span.break Brand Identity, PSD to Html
+		.mockup.wow.fadeInUp(style={opacity:0})
+			+jpg('om_layout')
+		section.identity
+			+sub-tt('identity')
+			main
+				.left
+					.info.wow.fadeInUp(style={opacity:0})
+						h4 logo design
+						ul.fir-logo
+							li.logo
+								+svg('om_logo1')
+							li
+								p one more 是個旅遊資訊類的品牌，商標的設計是以 one more 字母的形狀，為設計主軸勾勒出 logo 的造型，並用波浪營造旅遊、流浪的感覺，搭配沉穩典雅的字體，讓整體看起來更優雅。
+					.info.sec-logo.wow.fadeInUp(style={opacity:0})
+						h4 secondary logo
+						ul
+							li.logo2
+								+svg('om_logo2')
+							li.logo3
+								+svg('om_logo3')
+				.right
+					.info.wow.fadeInUp(style={opacity:0})
+						h4 typography
+						ul.typo
+							li.notoSerif
+								p.gray-l 標題
+								p 思源宋體 Noto Serif CJK TC Regular
+								p.font-b 思源宋體 Noto Serif CJK TC Bold
+							li.notoSans
+								p.gray-l 內文
+								p 思源黑體 Noto Sans CJK TC Regular
+								p.font-b 思源黑體 Noto Sans CJK TC Bold
+					.info.wow.fadeInUp(style={opacity:0})
+						h4 color
+						ul.color
+							li
+								.cir.cir1
+								p #f7a515
+							li
+								.cir.cir2
+								p #363636
+							li
+								.cir.cir3
+								p #000000	
+			.logo-demo.wow.fadeInUp(style={opacity:0})
+				.pic
+					+jpg('om_logo_demo')
+				.pic
+					+jpg('om_logo_demo2')
+		section.layout
+			+sub-tt('layout')
+			.box.pageBox.wow.fadeInUp(style={opacity:0})
+				.page.page2
+					+jpg('om_layout3')
+				.page.page1
+					+jpg('om_layout2')
+			.box.wow.fadeInUp(style={opacity:0})
+				.rwd.por
+					+png('om_layout4')
+					p 手機版的會員專區將選單設計成固定置底的 tab，讓 user 能夠更方便切換項目。
+			.box.wireframe.wow.fadeInUp(style={opacity:0})
+				+sub-tt('wireframe')
+				.pic
+					+png('om_wireframe')
+		.mockup.wow.fadeInUp(style={opacity:0})
+			+jpg('om_layout5')
+		+switchBox('google','coke')

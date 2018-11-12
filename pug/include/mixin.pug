@@ -1,0 +1,54 @@
+//- svg
+mixin svg(name)
+	-var path = "img/"
+	-var file = ".svg"
+	img(src=path + name + file)
+
+//- img
+mixin png(name)
+	-var path = "img/"
+	-var file = ".png"
+	img(src=path + name + file)
+//- jpg
+mixin jpg(name)
+	-var path = "img/"
+	-var file = ".jpg"
+	img(src=path + name + file)
+//- gif
+mixin gif(name)
+	-var path = "img/"
+	-var file = ".gif"
+	img(src=path + name + file)
+//- tt
+mixin sub-tt(name)
+	h2.tt
+		span #{name}
+
+mixin scroll
+	.scroll
+		span scroll
+		span.arrow
+
+mixin work(name, tt , type)
+	-var proj = "project-"
+	-var file = ".html"
+	a(href= proj + name + file).item.wow.fadeInUp(style={opacity:0})
+		.bn&attributes(attributes)
+		|
+		h3 #{tt}
+		|
+		p #{type}
+mixin switchBox(prev, next)
+	-var proj = "project-"
+	-var file = ".html"
+	.switchBox.por
+		a(href="#").btn-top
+			span
+		a(href= proj + prev + file).prev.por
+			span.arrowBox
+				span.arrow
+			span prev project
+		a(href= proj + next + file).next.por 
+			span next project
+			span.arrowBox
+				span.arrow

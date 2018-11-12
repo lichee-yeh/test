@@ -1,0 +1,51 @@
+.kv-wild {
+    background: url(../img/wild_kv.jpg) no-repeat center / cover;
+}
+
+.wild {
+    .introBox .left h3 {
+        line-height: 1;
+        @include pc-w {
+            line-height: 0.8;
+        }
+    }
+    .introBox .right {
+        @include pc-w {
+            margin-top: -10px;
+        }
+    }
+    .cir1 {
+        background: #2b7cb5;
+    }
+    .cir2 {
+        background: #8fcde1;
+    }
+    .pageBoxOverlap {
+        margin-bottom: 25vh;
+        @include m-767 {
+            margin-bottom: 8vh;
+            width: 74%;
+        }
+        .page {
+            width: 55%;
+            @include m-767 {
+                width: 100%;
+            }
+        }
+        .page2 {
+            @include pc-w {
+                margin-left: 2vh;
+            }
+            @include m-767 {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.font-s {
+    font-size: 1.4rem;
+    color: $l-gray;
+    font-weight: 700;
+    letter-spacing: 1px;
+}

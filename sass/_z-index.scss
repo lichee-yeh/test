@@ -1,0 +1,24 @@
+// 
+$elements: header-bar,
+navi,
+modals;
+
+// #index($list, $value)
+
+/* z-index: 1 */
+
+// .header-bar {
+//     z-index: index($elements, header-bar);
+// }
+
+/* z-index: 3 */
+
+// .modals {
+//     z-index: index($elements, navi);
+// }
+
+/* z-index: 2 */
+
+// .navi {
+//     z-index: index($elements, modals);
+// }

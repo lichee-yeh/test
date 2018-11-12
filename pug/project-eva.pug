@@ -1,0 +1,81 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+    link(rel = 'stylesheet', href = 'css/project.css')
+    script(src = './js/Project.min.js')
+block content
+    +scroll
+    main.por.eva
+        .kv.kv-eva
+        .device.mac.wow.fadeInUp(style={opacity:0})
+            +png('eva')
+        section.introBox
+            .left.wow.fadeInUp(style={opacity:0})
+                h3 
+                    span.break 那些年
+                    span.break 我們一起搭的
+                         span.break-m 747-400
+                a(href="http://747.evaair.com/#/zh" target='_blank') 
+                    span VIEW WEBSITE
+                    span.arrow
+            .right.wow.fadeInUp(style={opacity:0})
+                .intro
+                    h4 Description
+                    p 
+                        span.break 長榮航空 B747-400 客機在完成最末航班任務後正式退役，我們協助長榮航空製作這個網站，紀念波音 747 的光榮時刻，並與粉絲們分享長榮航空 B747-400 客機的一點一滴，一起重溫每個重要時刻。
+                        span.break 網站風格以清新明亮的感覺，以大量的天空及雲朵為主，希望能讓 user 一起以祝福的心情，歡慶這個美好的時光。
+                .intro
+                    h4 Information
+                    ul
+                        li
+                            span Project
+                            span 那些年 我們一起搭的 747-400
+                        li
+                            span Client
+                            span EVA AIR
+                        li
+                            span Year
+                            span 2018
+                        li
+                            span Role
+                            span 
+                                span.break Responsive Web Design, UI Design,
+                                span.break PSD to Html
+        .mockup.wow.fadeInUp(style={opacity:0})
+            +jpg('eva_layout')
+        section.identity.wow.fadeInUp(style={opacity:0})
+            +sub-tt('identity')
+            main
+                .left
+                    .info
+                        h4 typography
+                        ul.typo
+                            li
+                                p.gray-l 英文
+                                p Lato Light
+                                p.font-m Lato Medium
+                                p.font-b Lato Bold
+                            li.notoSans
+                                p.gray-l 中文
+                                p 思源黑體 Noto Sans CJK TC Regular
+                                p.font-m 思源黑體 Noto Sans CJK TC Medium
+                                p.font-b 思源黑體 Noto Sans CJK TC Bold
+                .right
+                    .info
+                        h4 color
+                        ul.color.kids-color
+                            li
+                                .cir.cir1
+                                p #009944
+                            li
+                                .cir.cir2
+                                p #4a7d6b
+                            li
+                                .cir.cir3
+                                p #ea5406
+        section.layout.introBox.wow.fadeInUp(style={opacity:0})
+            +sub-tt('layout')
+            .box.onePage 
+                .page.page1
+                    +jpg('eva_layout2')
+        +switchBox('tiger','kids')

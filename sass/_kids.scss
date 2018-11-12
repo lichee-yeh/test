@@ -1,0 +1,91 @@
+.kv-kids {
+    background: url(../img/kids_kv.jpg) no-repeat center/ cover;
+    @include m-767 {
+        background-position: 63% 50%;
+    }
+}
+
+.kids-typo {
+    width: 241px;
+    margin-top: 11px;
+    @include m-767 {
+        width: 236px;
+        margin-top: 0;
+    }
+    @include m-413 {
+        width: 225px;
+        margin-top: 0;
+    }
+}
+
+.kids {
+    .cir1 {
+        background: #cd2c5d;
+    }
+    .cir2 {
+        background: #585858;
+    }
+    .cir3 {
+        background: #f1e6d0;
+    }
+    .pageBox {
+        font-size: 0;
+        margin-bottom: 20vh;
+        position: relative;
+        @include pc-w {
+            width: calc(70% + 7vh);
+        }
+        @include m-767 {
+            margin-bottom: 8vh;
+        }
+        .page {
+            width: 50%;
+            @extend %shade;
+            @include m-767 {
+                width: 100%;
+            }
+        }
+    }
+    .page2 {
+        @include pc-w {
+            margin-left: 3.5vh;
+        }
+        @include m-767 {
+            margin-bottom: 8vh;
+        }
+    }
+    .page3 {
+        @include pc-w {
+            position: absolute;
+            top: 15vh;
+            right: 3.5vh;
+        }
+    }
+    .page4 {
+        margin-right: 60px;
+        @include m-767 {
+            margin: 0 0 8vh;
+        }
+    }
+    .page-m {
+        text-align: center;
+        margin-top: 8vh;
+        @include m-767 {
+            margin-top: 0;
+        }
+        .page {
+            width: 30%;
+            max-width: 354px;
+            @extend %shade;
+            @include m-767 {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    .layout .pageBoxOverlap {
+        @include m-767 {
+            width: 74%;
+        }
+    }
+}

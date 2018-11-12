@@ -1,0 +1,129 @@
+.kv-coke {
+    background: $coke;
+}
+
+.coke {
+    .phone {
+        max-width: 720px;
+        width: 60%;
+        margin: -35vh auto 0;
+        padding-right: 5%;
+        @include pc-1440 {
+            width: 40%;
+        }
+        @include m-1024 {
+            width: 50%;
+        }
+        @include m-767 {
+            width: 90%;
+            margin-top: -25vh;
+            padding-right: 15%;
+        }
+    }
+    .cir1 {
+        background: #f40000;
+    }
+    .cir2 {
+        background: #4a4a4a;
+    }
+    .coke-typo {
+        width: 140px;
+        margin-top: 5px;
+        @include pc-1440 {
+            width: 115px;
+            margin-top: 10px;
+        }
+        @include m-1024 {
+            width: 120px;
+        }
+    }
+    .logo {
+        width: 325px;
+        @include pc-1280 {
+            width: 260px;
+        }
+        @include m-1024 {
+            width: 80%;
+        }
+    }
+    .box {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            @include media-min(1281px) {
+                padding-bottom: 2vh;
+            }
+            @include pc-1280 {
+                padding-bottom: 3vh;
+            }
+        }
+        li {
+            width: 23%;
+            @extend %shade;
+            @include m-767 {
+                width: 48%;
+                margin-bottom: 30px;
+            }
+            &:nth-child(2n) {
+                margin-top: 65px;
+                @include pc-1280 {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+    .rwd {
+        margin-top: 0;
+    }
+}
+
+.handBox {
+    width: 100%;
+    height: 230px;
+    background: $coke;
+    margin-top: 455px;
+    @include pc-1440 {
+        margin-top: 290px;
+    }
+    @include pc-1280 {
+        margin-top: 205px;
+    }
+    @include m-1024 {
+        height: 10vh;
+        margin-top: 275px;
+    }
+    @include m-767 {
+        height: 1vh;
+        margin-top: 195px;
+    }
+    @include m-413 {
+        margin-top: 160px;
+    }
+    @include m-374 {
+        margin-top: 155px;
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        top: -140px;
+        transform: skewY(-8deg);
+        background: $coke;
+        @include m-767 {
+            height: 210px;
+        }
+    }
+    .mockup {
+        bottom: 0;
+        right: 15%;
+        width: 75%;
+        @include m-767 {
+            right: -17%;
+            width: 110%;
+        }
+    }
+}

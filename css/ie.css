@@ -1,0 +1,54 @@
+body {
+    background: #aec5c6;
+    font-family: ‘Noto Sans TC’, sans-serif, '微軟正黑體';
+}
+
+.ie_wrapper {
+    width: 910px;
+    height: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -210px;
+    margin-left: -455px;
+    text-align: center;
+}
+
+.ie_wrapper h2 {
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    margin-top: 45px;
+    color: #000;
+}
+
+.ie-icons {
+    width: 565px;
+    height: 125px;
+    margin: 0 auto;
+    margin-top: 68px;
+    margin-left: 149px;
+}
+
+.ie-icons li {
+    float: left;
+    width: 105px;
+    font-size: 12px;
+    text-align: center;
+    color: #000;
+    display: block;
+}
+
+.ie-icons li img {
+    width: 77px;
+    height: 77px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    border: 0;
+}
+
+.ie-icons li:hover {
+    filter: alpha(opacity=70);
+    color: #fff;
+}

@@ -1,0 +1,107 @@
+.kv-om {
+    background: url(../img/om_kv.jpg) no-repeat center / cover;
+}
+
+.onemore {
+    .logo {
+        width: 215px;
+    }
+    .sec-logo {
+        @include m-767 {
+            margin-bottom: 35px;
+        }
+        @include m-374 {
+            margin-bottom: 65px;
+        }
+        li {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 50px;
+            @include pc-1440 {
+                margin-right: 20px;
+            }
+            @include media-area(768px, 1024px) {
+                margin-right: 50px;
+            }
+            @include m-413 {
+                margin-right: 0;
+            }
+        }
+    }
+    .logo2 {
+        width: 170px;
+        margin-bottom: 30px;
+    }
+    .logo3 {
+        width: 90px;
+    }
+    .logo2,
+    .logo3 {
+        @include pc-1440 {
+            transform: scale(0.8);
+            transform-origin: 0 20%;
+        }
+        @include media-area(768px, 1024px) {
+            transform: scale(1);
+        }
+        @include m-374 {
+            transform: scale(1);
+        }
+    }
+    .cir1 {
+        background: #f7a515;
+    }
+    .cir2 {
+        background: #363636;
+    }
+    .cir3 {
+        background: #000;
+    }
+    .logo-demo {
+        width: 60%;
+        margin: 120px auto;
+        font-size: 0;
+        @include m-1024 {
+            margin: 90px auto;
+        }
+        @include m-767 {
+            width: 74%;
+            margin: 65px auto;
+        }
+        .pic {
+            width: 49%;
+            display: inline-block;
+            vertical-align: top;
+            &:first-child {
+                margin-right: 2%;
+                @include m-767 {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+            &:last-child {
+                @include m-767 {
+                    display: none;
+                }
+            }
+        }
+    }
+    .page {
+        width: 50%;
+        @extend %shade;
+        @include m-767 {
+            width: 100%;
+        }
+    }
+    .page2 {
+        margin-top: 7vh;
+        @include pc-w {
+            margin: 100px -150px 0 75px;
+        }
+    }
+    .pageBox {
+        @include m-767 {
+            flex-direction: column-reverse;
+        }
+    }
+}

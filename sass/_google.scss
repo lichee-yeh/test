@@ -1,0 +1,40 @@
+.google {
+    li {
+        display: block;
+    }
+    .bn {
+        width: 338px;
+        margin: -5vh auto 10vh;
+        @include m-767 {
+            margin: 5vh auto 8vh;
+        }
+        @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+            margin: -2vh auto 8vh;
+        }
+    }
+    .yt {
+        width: 55%;
+        margin: 0 auto 8vh;
+        @include m-767 {
+            margin: 0 auto 10vh;
+        }
+    }
+    .bn,
+    .yt {
+        @include m-767 {
+            width: 74%;
+        }
+    }
+}
+
+.break-bn {
+    @include pc-1280 {
+        display: block;
+    }
+    @include m-1024 {
+        display: inline;
+    }
+    @include m-374 {
+        display: block;
+    }
+}

@@ -1,0 +1,138 @@
+.kv-tiger {
+    background: url(../img/tiger-kv.jpg) no-repeat center / cover;
+    @include m-767 {
+        background-position: 79% 50%;
+    }
+}
+
+.tiger-typo {
+    width: 223px;
+    margin-top: 11px;
+}
+
+.tiger {
+    .identity .right {
+        @include media-min(1025px) {
+            width: 48%;
+        }
+    }
+    .cir1 {
+        background: #faa835;
+    }
+    .cir2 {
+        background: #fec232;
+    }
+    .cir3 {
+        background: #f3e1c0;
+    }
+    .cir4 {
+        background: #595854;
+    }
+    .gif {
+        margin-bottom: 15px;
+        li {
+            @include cir(70px);
+            overflow: hidden;
+            margin-bottom: 25px;
+            display: inline-block;
+            margin-right: 15px;
+            @include m-767 {
+                @include cir(50px);
+                margin-right: 10px;
+            }
+            @include m-374 {
+                @include cir(100px);
+                margin-right: 18px;
+            }
+        }
+    }
+    .category {
+        li {
+            @include size(48px);
+            margin-bottom: 25px;
+            display: inline-block;
+            margin-right: 15px;
+            @include m-767 {
+                @include size(45px);
+                margin-right: 10px;
+            }
+        }
+    }
+    .box {
+        text-align: center;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 15vh;
+            @include m-767 {
+                margin-top: 8vh;
+            }
+        }
+        li {
+            width: 49%;
+            margin-bottom: 50px;
+            @extend %shade;
+            @include m-767 {
+                width: 100%;
+            }
+        }
+    }
+    .storyboard {
+        .box {
+            width: 70%;
+            margin: auto;
+        }
+        ul {
+            margin-top: 0;
+        }
+        li {
+            width: 24%;
+            @include m-1024 {
+                width: 49%;
+            }
+            @include m-767 {
+                margin-bottom: 15px;
+                box-shadow: auto;
+            }
+        }
+    }
+}
+
+.tiger-info {
+    width: 100%;
+    margin-top: 30px;
+    @include pad-only {
+        width: 104%;
+    }
+    @include pc-1440 {
+        width: 580px;
+    }
+    @include m-767 {
+        width: 100%;
+    }
+    ;
+}
+
+.ytBox {
+    width: 70%;
+    margin: 5vh auto;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

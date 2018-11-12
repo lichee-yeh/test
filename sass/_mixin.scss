@@ -1,0 +1,223 @@
+// all mixins.
+@mixin arrow {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #000;
+    span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .arrow {
+        height: 1px;
+        width: 70px;
+        background: #000;
+        margin-left: 15px;
+        position: relative;
+        @extend %trans;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            background: #000;
+            width: 1px;
+            height: 6px;
+            right: 0;
+        }
+        &:before {
+            transform: rotate(45deg);
+            bottom: -4px;
+        }
+        &:after {
+            transform: rotate(-45deg);
+            top: -4px;
+        }
+    }
+    &:hover {
+        font-weight: 700;
+        @include media-hover {
+            .arrow {
+                width: 100px;
+            }
+        }
+    }
+}
+
+@mixin btn-black {
+    width: 190px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+@mixin v-write {
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+@mixin notoserif {
+    font-family: source-han-serif-tc, serif;
+}
+
+%all-100 {
+    width: 100%;
+    height: 100%;
+}
+
+%txt_justify {
+    text-align: justify;
+    text-justify: inter-ideographic;
+}
+
+%shade {
+    box-shadow: 0px 9px 28.42px 0.58px rgba(12, 11, 12, 0.11);
+}
+
+%shade2 {
+    box-shadow: -8.56px 2.781px 31.15px 3.85px rgba(0, 0, 0, 0.14);
+}
+
+%trans {
+    transition: all .3s ease;
+}
+
+%center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%v-write {
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+%flex-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%pos-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%Y50 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%X50 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+// constant-width-to-height-ratio
+%square {
+    background: #333;
+    width: 50%;
+    padding-top: 50%;
+}
+
+// Custom text selection
+// ::selection {
+//     background: aquamarine;
+//     color: black;
+// }
+// Hover underline animation
+@mixin hover-underline-animation($color) {
+    display: inline-block;
+    position: relative;
+    color: $color;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $color;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    &:hover {
+        &:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}
+
+// Disable selection
+%unselectable {
+    user-select: none;
+}
+
+// gradient-text
+@mixin gradient-text($color1, $color2) {
+    background: -webkit-linear-gradient($color1, $color2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+// flex box mid
+@mixin flex-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// flex equal-height box
+@mixin flex-h {
+    display: flex;
+    align-items: stretch;
+}
+
+// img size
+@mixin img_size($image) {
+    width: image-width("../img/#{$image}");
+    height: image-height("../img/#{$image}");
+    background: url("../img/#{$image}") no-repeat;
+}
+
+// circle
+@mixin cir($unit) {
+    width: $unit;
+    height: $unit;
+    border-radius: 100%;
+}
+
+@mixin pos-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// full-screen
+@mixin full-screen {
+    width: 100%;
+    min-height: 100%;
+}
+
+// vertical align
+@mixin v-align($h) {
+    &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        height: $h;
+    }
+}

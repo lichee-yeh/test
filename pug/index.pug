@@ -1,0 +1,90 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+	link(rel = 'stylesheet', href = 'css/index.css')
+	link(rel = 'stylesheet', href = 'css/jxIndex.css')
+	script(src = './js/Index.min.js')
+block nav-index
+block content
+	+scroll
+	section.kv
+		main.abs
+			h1 
+				span.text__first
+					span.text__word
+						| hey, 
+					span.text__first-bg
+				br
+				span.text__second
+					span.text__word
+						| Lichee
+					span.text__word
+						|  is here.
+					span.text__second-bg
+
+				//- span.break hey,
+				//- span.break Lichee 
+				//- 	span.break-m is here.
+			p(style={opacity:0}) designer / freelancer / hualiener
+
+		.contact.animated.fadeInUp(style={display:'none'})
+			p +886-928-135-451
+			a(href="mailto:yehcyamm@gmail.com").mail yehcyamm@gmail.com
+	section.work
+		h2.tt.wow.fadeInUp 
+			span work
+		.project.onemore.wow.fadeInUp 
+			.device
+				+png('onemore')
+			.info
+				ul
+					li.work-tt one more trip
+					li.des 
+						span.break 日常的留白，生活的想像，為旅行多踏一步。
+						span.break 希望在眾多的旅遊平台內容中，
+							span.break-pad 透過親身走訪體驗的方式，
+						span.break 為大家提供更多「選擇」。
+					li.type Responsive Website , 
+						span.break-m.break-pad UI Design, Brand Identity
+					li
+						a(href="project-one-more.html").btn-black case study
+		.project.coke.wow.fadeInUp 
+			.info
+				ul
+					li.work-tt 
+						span.break Coca-Cola
+						span.break 食尚餐廚集點送
+					li.des 
+						span.break 可口可樂集點活動，暢飲還能集點換好禮！
+						span.break 手機功能取向，簡潔的畫面讓網站更好瀏覽。
+					li.type Mobile First, UI Design
+					li
+						a(href="project-coke.html").btn-black case study
+			.device
+				+png('coke')
+		.project.sprite.wow.fadeInUp 
+			.device
+				+png('sprite-cool')
+			.info
+				ul
+					li.work-tt 
+						span.break Sprite
+						span.break Cool 玩瓶 BE YOU 
+							span.break-m.break-pad  激發最酷的你
+					li.des 
+						span.break BE YOU！想要做自己，就必須用盡全力去實現。
+						span.break 溝通 Cool 玩瓶新主張及設計理念，
+							span.break-pad 並製作 facebook 大頭貼相框，
+						span.break 一起無畏無懼地說出自己真實想法與生活主張。
+					li.type Responsive Website, UI design
+					li
+						a(href="project-sprite-cool.html").btn-black case study
+		.moreBox.por.wow.fadeInUp 
+			span.arrowDown
+			a(href="work.html").btn-more see more work
+		.contact.outer-contact.wow.fadeInUp(data-wow-offset="50" data-wow-duration="1.5s")
+			p say hello?
+			.box
+				p +886-928-135-451
+				a(href="mailto:yehcyamm@gmail.com").mail yehcyamm@gmail.com
+block footer

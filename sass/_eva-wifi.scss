@@ -1,0 +1,22 @@
+.eva-wifi {
+    .introBox {
+        @include media-min(1441px) {
+            width: 55%;
+        }
+    }
+    .post {
+        width: 55%;
+        background: #fff;
+        margin: -5vh auto 10vh;
+        @include pc-1440 {
+            width: 70%;
+        }
+        @include m-1024 {
+            width: 60%;
+        }
+        @include m-767 {
+            width: 74%;
+            margin: 0 auto 10vh;
+        }
+    }
+}

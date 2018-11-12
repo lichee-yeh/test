@@ -1,0 +1,93 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+    link(rel = 'stylesheet', href = 'css/project.css')
+    script(src = './js/Project.min.js')
+block content
+    +scroll
+    main.por.coke
+        .kv.kv-coke
+        .device.phone.wow.fadeInUp(style={opacity:0})
+            +png('coke')
+        section.introBox
+            .left.wow.fadeInUp(style={opacity:0})
+                h3 
+                    span.break Coca-Cola
+                    span.break 食尚餐廚集點送
+                a(href="http://cell.webgene.com.tw/coke/event/1612_coke_with_food/Coke-FoodPoint/" target='_blank') 
+                    span VIEW WEBSITE
+                    span.arrow
+            .right.wow.fadeInUp(style={opacity:0})
+                .intro
+                    h4 Description
+                    p 
+                        span.break 可口可樂的集點活動，這個網站是功能取向，並以手機版為主，讓 user 在集點、兌換商品的流程能夠簡單、流暢的操作。
+                        span.break 網站的風格以簡潔的品牌色為基調，利用紅白大色塊呈現強烈對比，讓贈品能夠成為視覺重點。
+                .intro
+                    h4 Information
+                    ul
+                        li
+                            span Project
+                            span 食尚餐廚集點送 活動網站
+                        li
+                            span Client
+                            span Coca-Cola
+                        li
+                            span Year
+                            span 2017
+                        li
+                            span Role
+                            span 
+                                span.break Web Design, UI Design,
+                                span.break Logo Design, PSD to Html
+        .mockup.wow.fadeInUp(style={opacity:0})
+            +jpg('coke_layout')
+        section.identity.wow.fadeInUp(style={opacity:0})
+            +sub-tt('identity')
+            main
+                .left
+                    .info
+                        h4 logo design
+                        ul.fir-logo
+                            li.logo
+                                +svg('coke_tt')
+                            li
+                                p 標準字設計選擇了較活潑的圓體為雛形，再進一步修改字體，其中包含廚具和圓點的元素，整體希望呈現活力感。
+                .right
+                    .info
+                        h4 typography
+                        ul.typo
+                            li.coke-typo
+                              +svg('coke_typo')  
+                            li.notoSans
+                                p.gray-l 內文
+                                p 思源黑體 Noto Sans CJK TC Regular
+                                p.font-b 思源黑體 Noto Sans CJK TC Bold
+                    .info
+                        h4 color
+                        ul.color
+                            li
+                                .cir.cir1
+                                p #f40000
+                            li
+                                .cir.cir2
+                                p #4a4a4a
+        section.layout
+            +sub-tt('layout')
+            .box.wow.fadeInUp(style={opacity:0})
+                .rwd.por
+                    +png('coke_layout2')
+            .box.wow.fadeInUp(style={opacity:0})
+                ul
+                    li
+                        +jpg('coke_layout3')
+                    li
+                        +jpg('coke_layout4')
+                    li
+                        +jpg('coke_layout5')
+                    li
+                        +jpg('coke_layout6')
+        .handBox.por.wow.fadeInUp(style={opacity:0})
+            .mockup.abs.wow.fadeInUp(style={opacity:0})
+                +png('coke_hand')
+        +switchBox('one-more','sprite-cool')

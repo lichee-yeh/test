@@ -1,0 +1,70 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+    link(rel = 'stylesheet', href = 'css/project.css')
+    script(src = './js/Project.min.js')
+block afterBody
+    #fb-root
+    script.
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+block content
+    +scroll
+    main.por.eva-wifi.banner-info
+        section.introBox
+            .left.wow.fadeInUp(style={opacity:0})
+                h3 
+                    span.break 長榮航空粉絲專頁 
+                    span.break 機上 Wi-Fi 宣傳影片
+                a(href="https://www.facebook.com/evaairwayscorp.tw/videos/816506591829859/" target='_blank') 
+                    span VIEW WEBSITE
+                    span.arrow
+            .right.wow.fadeInUp(style={opacity:0})
+                .intro
+                    h4 Description
+                    p 
+                        span.break 第一期的「地勤才藝班」將於桃園機場的長榮貴賓室 隆重登場！
+                        span.break 2017 年愚人節與長榮航空攜手推出『機場地勤才藝班』，再次讓長榮獲得了不錯的新聞版面！
+                        span.break 插畫以簡單的線條呈現，淡淡的背景，凸顯人物的動作，希望以簡單的畫面內容搏君一笑。
+                .intro
+                    h4 Information
+                    ul
+                        li
+                            span Project
+                            span 機上 Wi-Fi 宣傳影片
+                        li
+                            span Client
+                            span EVA AIR
+                        li
+                            span Year
+                            span 2017
+                        li
+                            span Role
+                            span 
+                                span.break Video Material Design
+                                span.break Motion Design
+        .post.wow.fadeInUp(style={opacity:0})
+            .fb-video(data-href='https://www.facebook.com/evaairwayscorp.tw/videos/816506591829859/', data-show-text='true')
+                blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/evaairwayscorp.tw/videos/816506591829859/')
+                    a(href='https://www.facebook.com/evaairwayscorp.tw/videos/816506591829859/') EVA Wi-Fi
+                        p
+                            | 【就是現在！以最優惠的方式購買或兌換機上Wi-Fi】
+                            | 機上也可以使用無線網路喔！
+                            | 在全部的A330-300 及 部分的B777-300ER機隊中，
+                            | 所有旅客、不分艙等～ 都能使用喔！
+                            | 粉絲們可以透過行程管理購買，或是使用哩程兌換EVA Wi-Fi～
+                            | 就算在空中，也能和親友緊密聯繫！
+                            | 👉購買與兌換資訊：https://goo.gl/WikCaE
+                            | *本公司保有隨時更改費率或優惠之權利，售價以官網公告金額為主。
+                            | #EVAAir #EVAWiFi
+                        | Posted by 
+                        a(href='https://www.facebook.com/evaairwayscorp.tw/') EVA Airways Corp. 長榮航空
+                        |  on Monday, June 5, 2017
+
+        +switchBox('eva-fool','google')
